@@ -98,6 +98,13 @@
         .register-box .link:hover {
             text-decoration: underline;
         }
+
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -105,7 +112,13 @@
 <div class="register-container">
     <div class="register-box">
         <h2>Create Your Account</h2>
-        <form action="/users" method="POST">
+        <!-- Formulier dat naar de juiste Flask route stuurt -->
+        <form method="POST" action="{{ url_for('register') }}">
+            <!-- Toon foutmeldingen indien aanwezig -->
+            {% if error %}
+                <div class="error-message">{{ error }}</div>
+            {% endif %}
+            
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
             
@@ -124,7 +137,7 @@
             
             <button type="submit" class="btn">Register</button>
         </form>
-        <a href="/login" class="link">Already have an account? Log in here</a>
+        <a href="{{ url_for('login') }}" class="link">Already have an account? Log in here</a>
     </div>
 </div>
 
