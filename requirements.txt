@@ -1,8 +1,5 @@
-Flask
-psycopg2-binary
-Werkzeug
-PyJWT
-flask-socketio
-python-socketio
-eventlet
-greenlet
+flask
+psycopg2
+flask_socketio
+flask-sqlalchemy
+flask-migrate
