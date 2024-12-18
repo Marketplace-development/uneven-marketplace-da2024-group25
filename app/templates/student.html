@@ -206,9 +206,10 @@
 
         /* Dashboard Features */
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            justify-content: center;
             gap: 30px;
+            margin-top: 40px;
         }
 
         .feature-card {
@@ -220,6 +221,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
             color: #333;
+            width: 250px;
         }
 
         .feature-card:hover {
@@ -270,12 +272,12 @@
             }
 
             .features-grid {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: center;
             }
 
             .logo {
                 font-size: 1.5rem;
-                /* Adjust logo size for smaller screens */
             }
         }
     </style>
@@ -310,20 +312,11 @@
                 <h3>My Bookings</h3>
                 <p>View and manage your upcoming tutoring sessions easily.</p>
             </a>
-            <!-- My Listings -->
-            <!-- <a href="/student/my_listings" class="feature-card">
-                <h3>My Listings</h3>
-                <p>Create and manage your tutoring listings to connect with students.</p>
-            </a> -->
+            
             <!-- Reviews -->
             <a href="/reviews" class="feature-card">
                 <h3>Reviews</h3>
                 <p>Read and respond to reviews left by students and tutors.</p>
-            </a>
-            <!-- Live Chat -->
-            <a href="/chat" class="feature-card">
-                <h3>Live Chat</h3>
-                <p>Connect with tutors in real-time to get immediate help and advice.</p>
             </a>
         </div>
     </div>
