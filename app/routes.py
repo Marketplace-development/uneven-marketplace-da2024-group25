@@ -4,7 +4,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 
 from app.models import Bookings, Users
-from project import allowed_file
+from allowed_files import allowed_file
 from .helpers import get_account_type, login_required
 from datetime import datetime
 from app import db
